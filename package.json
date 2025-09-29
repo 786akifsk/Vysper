@@ -44,12 +44,16 @@
     },
     "files": [
       "**/*",
+      "lib/**/*",
       "!dist/**/*",
       "!*.md",
-      "!.git/**/*",
-      "!.env*"
+      "!.git/**/*"
     ],
     "extraFiles": [
+      {
+        "from": ".env",
+        "to": ".env"
+      },
       {
         "from": "prompts",
         "to": "prompts"
