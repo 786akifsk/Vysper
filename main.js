@@ -36,7 +36,7 @@ class ApplicationController {
     }
 
     // Set default stealth app name early
-    app.setName("Terminal "); // Default to Terminal stealth mode
+    app.setName("Terminal"); // Default to Terminal stealth mode
     process.title = "Terminal ";
 
     if (
@@ -60,7 +60,7 @@ class ApplicationController {
 
   async onAppReady() {
     // Force stealth mode IMMEDIATELY when app is ready
-    app.setName("Terminal ");
+    app.setName("Terminal");
     process.title = "Terminal ";
 
     logger.info("Application starting", {
@@ -770,7 +770,7 @@ class ApplicationController {
         });
         return;
       }
-
+      
       logger.info("Processing transcription with intelligent LLM response", {
         skill: this.activeSkill,
         textLength: cleanText.length,
@@ -1000,16 +1000,16 @@ class ApplicationController {
       const path = require("path");
       const fs = require("fs");
 
-      // Icon mapping for available icons in assests/icons folder
+      // Icon mapping for available icons in assets/icons folder
       const iconPaths = {
-        terminal: "assests/icons/terminal.png",
-        activity: "assests/icons/activity.png",
-        settings: "assests/icons/settings.png",
+        terminal: "assets/icons/terminal.png",
+        activity: "assets/icons/activity.png",
+        settings: "assets/icons/settings.png",
       };
 
       // App name mapping for stealth mode
       const appNames = {
-        terminal: "Terminal ",
+        terminal: "Terminal",
         activity: "Activity Monitor ",
         settings: "System Settings ",
       };
@@ -1107,7 +1107,7 @@ class ApplicationController {
           // Force dock refresh
           setTimeout(() => {
             app.dock.setIcon(
-              require("path").resolve(`assests/icons/${iconKey}.png`)
+              require("path").resolve(`assets/icons/${iconKey}.png`)
             );
           }, 50);
         }
