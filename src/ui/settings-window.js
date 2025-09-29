@@ -144,9 +144,9 @@ document.addEventListener('DOMContentLoaded', () => {
         if (!iconGrid) return;
 
         const icons = [
-            { key: 'terminal', name: 'Terminal', src: './assests/icons/terminal.png' },
-            { key: 'activity', name: 'Activity', src: './assests/icons/activity.png' },
-            { key: 'settings', name: 'Settings', src: './assests/icons/settings.png' }
+            { key: 'terminal', name: 'Terminal', src: './assets/icons/terminal.png' },
+            { key: 'activity', name: 'Activity', src: './assets/icons/activity.png' },
+            { key: 'settings', name: 'Settings', src: './assets/icons/settings.png' }
         ];
 
         iconGrid.innerHTML = '';
@@ -166,11 +166,11 @@ document.addEventListener('DOMContentLoaded', () => {
                 console.error('Failed to load icon:', icon.src);
                 // Try alternative paths
                 const altPaths = [
-                    `./assests/${icon.key}.png`,
+                    `./assets/${icon.key}.png`,
                     `./assets/icons/${icon.key}.png`,
                     `./assets/${icon.key}.png`
                 ];
-                
+    
                 let pathIndex = 0;
                 const tryNextPath = () => {
                     if (pathIndex < altPaths.length) {
